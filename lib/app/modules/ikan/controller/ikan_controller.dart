@@ -25,7 +25,9 @@ class IkanController extends GetxController {
       "habitat": habitat
     };
     final result = await IkanApiService().updateIkan(body, id);
-    return result;
+    // return result;
+
+    return true;
   }
 
   Future<dynamic> deleteIkan(String id) async {

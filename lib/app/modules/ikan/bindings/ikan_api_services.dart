@@ -29,6 +29,8 @@ class IkanApiService {
 
   Future<bool> updateIkan(Map<String, dynamic> body, String id) async {
     final response = await http.put(Uri.parse("$baseUrl/ikan/$id"), body: body);
+    final result = json.decode(response.body);
+    print(result);
     if (response.statusCode == 200) {
       return true;
     } else {
